@@ -24,7 +24,7 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
       with:
-        name: gmail-desktop-${{ runner.os }}-$(uname -m)
+        name: gmail-desktop-${{ runner.os }}-amd64
         path: target/release/bundle/dmg/gmail-desktop_0.1.0_x64.dmg
 
   build_macos_m2:
@@ -69,13 +69,13 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
       with:
-        name: gmail-desktop-${{ runner.os }}-$(uname -m)-deb
+        name: gmail-desktop-${{ runner.os }}-amd64-deb
         path: target/release/bundle/deb/gmail-desktop_0.1.0_amd64.deb
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
       with:
-        name: gmail-desktop-${{ runner.os }}-$(uname -m)-appimage
+        name: gmail-desktop-${{ runner.os }}-amd64-appimage
         path: target/release/bundle/appimage/gmail-desktop_0.1.0_amd64.AppImage
 
 
@@ -95,5 +95,5 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-artifact@v3
       with:
-        name: gmail-desktop-${{ runner.os }}-$(uname -m)
+        name: gmail-desktop-${{ runner.os }}-amd64
         path: target/release/bundle/msi/gmail-desktop_0.1.0_x64_en-US.msi
